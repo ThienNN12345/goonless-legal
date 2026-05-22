@@ -1,392 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#0a0a0c">
-  <title>Goonless — Privacy Policy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goonless Privacy Policy</title>
   <style>
     :root {
-      --bg:          oklch(0.12 0.005 260);
-      --bg-elev:     oklch(0.16 0.005 260);
-      --fg:          oklch(0.96 0.005 80);
-      --fg-dim:      oklch(0.72 0.005 80);
-      --fg-faint:    oklch(0.48 0.005 80);
-      --rule:        oklch(0.24 0.005 260);
-      --rule-strong: oklch(0.32 0.005 260);
-      --accent:      oklch(0.80 0.12 70);
-
-      --sans: "Geist", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-
-      --pad-x: clamp(1.25rem, 5vw, 2.5rem);
-      --max:   38rem;
+      --bg: #f7f5ef;
+      --card: #ffffff;
+      --text: #121212;
+      --muted: #666666;
+      --border: #e5e0d8;
+      --accent: #111111;
+      --soft: #f0ebe3;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
-      color: var(--fg);
-      font-family: var(--sans);
-      font-size: clamp(15px, 0.95rem + 0.2vw, 17px);
+      color: var(--text);
       line-height: 1.6;
-      font-feature-settings: "ss01", "ss02", "cv11";
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-      padding:
-        max(1.25rem, env(safe-area-inset-top))
-        max(var(--pad-x), env(safe-area-inset-right))
-        max(2rem, env(safe-area-inset-bottom))
-        max(var(--pad-x), env(safe-area-inset-left));
-      min-height: 100vh;
-      min-height: 100svh;
     }
 
-    .page { max-width: var(--max); margin: 0 auto; }
-
-    .bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-block: 0.5rem 3rem;
-    }
-
-    .wordmark {
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 0.8125rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--fg);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .wordmark::before {
-      content: "";
-      width: 0.4rem;
-      height: 0.4rem;
-      border-radius: 999px;
-      background: var(--accent);
-      display: inline-block;
-    }
-
-    .bar-tag {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--fg-faint);
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 20px;
     }
 
     .hero {
-      padding-block: 1rem 2.5rem;
-      border-top: 1px solid var(--rule);
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .eyebrow {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.14em;
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--soft);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--fg-faint);
-      margin: 1.25rem 0 1.25rem;
+      color: var(--muted);
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-family: var(--sans);
-      font-weight: 400;
-      font-size: clamp(1.875rem, 1.3rem + 2.6vw, 2.625rem);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      margin: 0 0 1.75rem;
-      text-wrap: balance;
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1;
+      margin: 0 0 18px;
+      letter-spacing: -0.05em;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto;
     }
 
     .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.25rem;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-      color: var(--fg-dim);
-    }
-
-    .meta span {
-      display: inline-flex;
-      gap: 0.5rem;
-    }
-
-    .meta .k {
-      color: var(--fg-faint);
-    }
-
-    .lead {
-      font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.1875rem);
-      line-height: 1.55;
-      color: var(--fg);
-      margin: 2rem 0 3.5rem;
-      text-wrap: pretty;
-      max-width: 32rem;
-    }
-
-    section.s {
       display: grid;
-      grid-template-columns: 3.25rem 1fr;
-      gap: 0 1rem;
-      padding-block: 2rem;
-      border-top: 1px solid var(--rule);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 34px auto 0;
+      max-width: 460px;
     }
 
-    .s-num {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-      padding-top: 0.45rem;
+    .meta-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      text-align: left;
     }
 
-    .s-body {
-      min-width: 0;
+    .meta-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
     }
 
-    .s h2 {
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
-      letter-spacing: -0.005em;
-      margin: 0 0 1rem;
-      color: var(--fg);
+    .meta-value {
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 4px;
     }
 
-    .s p {
-      margin: 0 0 0.85rem;
-      color: var(--fg-dim);
-      text-wrap: pretty;
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      margin-bottom: 18px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.04);
     }
 
-    .s p:last-child {
+    .section-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    p:last-child {
       margin-bottom: 0;
     }
 
-    .s strong {
-      color: var(--fg);
-      font-weight: 500;
+    ul {
+      margin: 12px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     .services {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 0;
-      border-top: 1px solid var(--rule);
-    }
-
-    .services li {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1rem;
-      padding: 0.85rem 0;
-      border-bottom: 1px solid var(--rule);
-      color: var(--fg);
-      font-size: 0.95rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
     }
 
-    .services .role {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--fg-faint);
-      align-self: center;
+    .service {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      background: #faf9f5;
     }
 
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 0.4rem 0.75rem;
-      margin-top: 0.5rem;
+    .service strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
     }
 
-    .contact-row .k {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--fg-faint);
+    .service span {
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .contact-row a {
-      font-family: var(--mono);
-      font-size: 0.9rem;
-      color: var(--fg);
+    a {
+      color: var(--text);
+      font-weight: 700;
       text-decoration: none;
-      border-bottom: 1px solid var(--rule-strong);
-      padding-bottom: 1px;
-      transition: border-color 0.15s ease, color 0.15s ease;
+      border-bottom: 1px solid var(--text);
     }
 
-    .contact-row a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
+    .footer {
+      text-align: center;
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    footer {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--rule);
+    .footer-links {
+      margin-top: 8px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem 2rem;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--fg-faint);
+      justify-content: center;
+      gap: 16px;
     }
 
-    footer nav {
-      display: flex;
-      gap: 1.25rem;
-    }
-
-    footer a {
-      color: var(--fg-dim);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: var(--accent);
-    }
-
-    footer .here {
-      color: var(--fg);
-    }
-
-    @media (min-width: 48rem) {
-      :root {
-        --pad-x: 3rem;
-        --max: 42rem;
+    @media (max-width: 720px) {
+      .page {
+        padding: 36px 16px;
       }
 
-      section.s {
-        grid-template-columns: 4.5rem 1fr;
-        gap: 0 1.5rem;
-        padding-block: 2.5rem;
-      }
-
-      .bar {
-        padding-block: 1rem 4rem;
-      }
-    }
-
-    @media (max-width: 26rem) {
-      section.s {
+      .meta {
         grid-template-columns: 1fr;
-        gap: 0.75rem;
       }
 
-      .s-num {
-        padding-top: 0;
+      .services {
+        grid-template-columns: 1fr;
       }
-    }
 
-    @media (prefers-reduced-motion: no-preference) {
-      a {
-        transition: color 0.15s ease, border-color 0.15s ease;
+      .card {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      h2 {
+        font-size: 24px;
       }
     }
   </style>
 </head>
 <body>
-  <main class="page" data-screen-label="Privacy">
-    <div class="bar">
-      <a class="wordmark" href="index.html">Goonless</a>
-      <span class="bar-tag">Legal · 01/02</span>
-    </div>
-
-    <header class="hero">
-      <p class="eyebrow">Privacy Policy</p>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">Privacy Policy</div>
       <h1>Your progress belongs to you.</h1>
+      <p class="subtitle">
+        Goonless respects your privacy. Goonless does not collect, store, or sell personal information on external servers.
+      </p>
+
       <div class="meta">
-        <span><span class="k">Effective</span> May 17, 2026</span>
-        <span><span class="k">Version</span> 1.0</span>
-      </div>
-    </header>
-
-    <p class="lead">
-      Goonless respects your privacy. Goonless does not collect, store, or sell personal information on external servers.
-    </p>
-
-    <section class="s">
-      <div class="s-num">01</div>
-      <div class="s-body">
-        <h2>Local-first data</h2>
-        <p>Habit progress, streaks, check-ins, reflections, and app preferences remain stored locally on your device unless you choose to share them.</p>
-      </div>
-    </section>
-
-    <section class="s">
-      <div class="s-num">02</div>
-      <div class="s-body">
-        <h2>GoonBot</h2>
-        <p>Goonless may include an AI assistant called GoonBot. If you choose to use GoonBot, the messages you send may be processed by a third-party AI service provider only to generate a response.</p>
-        <p><strong>Do not enter sensitive personal information into GoonBot.</strong></p>
-        <p>GoonBot is not medical advice, therapy, crisis support, or a substitute for professional help. It is intended only for general self-reflection and habit support.</p>
-      </div>
-    </section>
-
-    <section class="s">
-      <div class="s-num">03</div>
-      <div class="s-body">
-        <h2>Third-party services</h2>
-        <p>Goonless may use trusted third-party services to support app functionality. These services may process limited technical information under their own privacy policies.</p>
-        <ul class="services">
-          <li>RevenueCat <span class="role">Subscriptions</span></li>
-          <li>Apple <span class="role">Store &amp; Billing</span></li>
-          <li>AI service providers <span class="role">GoonBot</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="s">
-      <div class="s-num">04</div>
-      <div class="s-body">
-        <h2>Data security</h2>
-        <p>Because your app data stays on your device, you remain in control of it.</p>
-      </div>
-    </section>
-
-    <section class="s">
-      <div class="s-num">05</div>
-      <div class="s-body">
-        <h2>Contact</h2>
-        <p>Questions about this policy? Reach the team directly.</p>
-        <div class="contact-row">
-          <span class="k">Email</span>
-          <a href="mailto:thiennguyen55090@gmail.com">thiennguyen55090@gmail.com</a>
+        <div class="meta-box">
+          <div class="meta-label">Effective</div>
+          <div class="meta-value">May 22, 2026</div>
+        </div>
+        <div class="meta-box">
+          <div class="meta-label">Version</div>
+          <div class="meta-value">2.0</div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <span>© 2026 Goonless</span>
-      <nav>
-        <a href="privacy.html" class="here" aria-current="page">Privacy</a>
+    <section class="card">
+      <div class="section-number">01</div>
+      <h2>Local-first data</h2>
+      <p>
+        Habit progress, streaks, check-ins, reflections, counters, urge logs, and app preferences remain stored locally on your device unless you choose to share them.
+      </p>
+      <p>
+        Goonless does not track you across other companies’ apps or websites.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-number">02</div>
+      <h2>Safari Content Blocker</h2>
+      <p>
+        Goonless may include an optional Safari content blocker designed to reduce access to distracting or unwanted websites.
+      </p>
+      <p>
+        The content blocker runs through Safari on your device. Goonless does not collect your browsing history, does not see the websites you visit, and does not sell or share browsing activity.
+      </p>
+      <p>
+        Website blocking rules may be included with the app or updated as part of app updates. These rules are used only to help Safari block matching content on your device.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-number">03</div>
+      <h2>GoonBot</h2>
+      <p>
+        Goonless may include an AI assistant called GoonBot. If you choose to use GoonBot, the messages you send may be processed by a third-party AI service provider only to generate a response.
+      </p>
+      <p>
+        Do not enter sensitive personal information into GoonBot.
+      </p>
+      <p>
+        GoonBot is not medical advice, therapy, crisis support, or a substitute for professional help. It is intended only for general self-reflection and habit support.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-number">04</div>
+      <h2>Third-party services</h2>
+      <p>
+        Goonless may use trusted third-party services to support app functionality. These services may process limited technical information under their own privacy policies.
+      </p>
+
+      <div class="services">
+        <div class="service">
+          <strong>RevenueCat</strong>
+          <span>Subscriptions</span>
+        </div>
+        <div class="service">
+          <strong>Apple</strong>
+          <span>Store & Billing</span>
+        </div>
+        <div class="service">
+          <strong>AI service providers</strong>
+          <span>GoonBot</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-number">05</div>
+      <h2>Data security</h2>
+      <p>
+        Because most app data stays on your device, you remain in control of it. Please keep your device secure and use your device’s built-in privacy and security features.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-number">06</div>
+      <h2>Children’s privacy</h2>
+      <p>
+        Goonless is not intended for children under 13. We do not knowingly collect personal information from children under 13.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-number">07</div>
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. When we make changes, we will update the effective date and version number on this page.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-number">08</div>
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy? Reach the team directly.
+      </p>
+      <p>
+        Email: <a href="mailto:thiennguyen55090@gmail.com">thiennguyen55090@gmail.com</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div>© 2026 Goonless</div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
-      </nav>
+      </div>
     </footer>
   </main>
 </body>
